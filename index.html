@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Student Study Planner</h1>
+      <p>Manage your subjects, assignments, deadlines, and progress.</p>
+    </header>
+
+    <section class="form-card">
+      <h2>Add Assignment</h2>
+
+      <form id="assignmentForm">
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            placeholder="Example: Web Technology"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="assignment">Assignment</label>
+          <input
+            type="text"
+            id="assignment"
+            placeholder="Example: HTML Forms"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="deadline">Deadline</label>
+          <input type="date" id="deadline" required />
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select id="status" required>
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+        </div>
+
+        <button type="submit">Add Assignment</button>
+      </form>
+    </section>
+
+    <section class="controls">
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search by subject or assignment..."
+      />
+
+      <select id="filterStatus">
+        <option value="All">All Assignments</option>
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+    </section>
+
+    <section>
+      <h2>Assignments</h2>
+      <div id="assignmentList" class="assignment-list"></div>
+    </section>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #64748b;
+}
+
+.form-card,
+.assignment-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.form-card {
+  margin-bottom: 24px;
+}
+
+.form-card h2,
+section > h2 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+select,
+button {
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+form button {
+  align-self: end;
+  height: 42px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.controls input {
+  flex: 1;
+}
+
+.assignment-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.assignment-card {
+  border-left: 5px solid #2563eb;
+}
+
+.assignment-card h3 {
+  margin-top: 0;
+  color: #0f172a;
+}
+
+.assignment-card p {
+  margin: 10px 0;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status.in-progress {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status.completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.card-actions button {
+  font-size: 13px;
+  padding: 8px 10px;
+}
+
+.delete-button {
+  background: #dc2626;
+}
+
+.delete-button:hover {
+  background: #b91c1c;
+}
+
+.empty-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #64748b;
+}
+
+@media (max-width: 700px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+}
